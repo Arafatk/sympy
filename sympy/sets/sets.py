@@ -1,7 +1,7 @@
 from __future__ import print_function, division
 
 from itertools import product
-
+from sympy.assumptions import Q, ask
 from sympy.core.sympify import _sympify, sympify
 from sympy.core.basic import Basic
 from sympy.core.singleton import Singleton, S
@@ -964,6 +964,9 @@ class Interval(Set, EvalfMixin):
         return FiniteSet(self.start, self.end)
 
     def _contains(self, other):
+        if isinstance(other, Set):
+            return False
+
         if other.is_real is False:
             return false
 
