@@ -950,4 +950,4 @@ def test_set_in_interval():
     assert FiniteSet(1, 2) not in Interval(0, 5)
     assert EmptySet() not in Interval(0, 5)
     assert Union(Interval(0, 1), Interval(1, 2)) not in Interval(0, 5)
-    assert Intersection(Interval(0, 1), Interval(1, 2)) not in Interval(0, 5) 
+    assert Intersection(Interval(0, 1), Interval(1, 2)) not in Interval(0, 5)
